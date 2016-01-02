@@ -1,5 +1,19 @@
 To create the mnist's lmdb database using python
 
+## Added train-zy-lenet-train-test.sh, zy-train-test-net.prototxt, zy-train-test-solver.prototxt
+
+first to write a net file zy-train-test-net.prototxt
+
+second to write a solver file zy-train-test-solver.prototxt
+
+finally to write a bash script train-zy-lenet-train-test.sh
+
+put them to $CAFFE_HOME/example/zy-mnist
+./$CAFFE_HOME/example/zy-mnist/train-zy-lenet-train-test.sh
+
+When file names or file pathes changed, remember to change these three files correspondingly.
+
+
 ### 1. use the digits's data example
 
 run digits/tools/download_data/main.py mnist ~/mnist to download the mnist dataset

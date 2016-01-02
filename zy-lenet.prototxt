@@ -37,6 +37,8 @@ layer {
   }
 }
 
+
+
 layer {
   name: "conv1"
   type: "Convolution"
@@ -160,6 +162,17 @@ layer {
     bias_filler {
       type: "xavier"
     }
+  }
+}
+
+layer {
+  name: "train-accuracy"
+  type: "Accuracy"
+  bottom: "ip2"
+  bottom: "label"
+  top: "train-accuracy"
+  include {
+    phase: TRAIN
   }
 }
 

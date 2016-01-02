@@ -1,4 +1,7 @@
-net: "examples/mnist-train/lenet-train.prototxt"
+net: "examples/zy-mnist/zy-train-test-net.prototxt"
+
+test_iter: 100
+test_interval: 500
 
 base_lr: 0.01
 momentum: 0.9
