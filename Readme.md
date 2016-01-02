@@ -5,6 +5,9 @@ run digits/tools/download_data/main.py mnist ~/mnist to download the mnist datas
 https://github.com/NVIDIA/DIGITS/blob/master/docs/GettingStarted.md
 
 2. mnist will be download to ~/mnist and generate the train.txt and label.txt file dynamicly, the filepath is corresponding to your download location.
+Notice that the data sequence is corresponding to the storage sequence in train-labels-idx1-ubyte.gz>train-labels.bin
+For example, in train-labels.bin, labels are storaged like 5,0,4...
+So if you don't shuffle the data and labels, it doesn't make much difference.
 
 3. put create_lmdb-train.py to the folder of ~/mnist/train, then python create_lmdb-train.py to run it.
 Remember to setting caffe python interface path in create_lmdb-train.py to make it run correctly.
